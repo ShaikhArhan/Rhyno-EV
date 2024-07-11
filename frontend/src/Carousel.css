@@ -1,0 +1,93 @@
+/* Carousel.css */
+.carousel-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  background-color: #fff6f600;
+  border: 1px solid #dddddd00;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  overflow: hidden;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+
+}
+
+.slide {
+  height: 350px;
+  padding: 20px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* .slide :hover{
+  
+} */
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.slide h1 {
+  margin-bottom: 10px;
+  /* color: #000; */
+  color: rgba(245, 222, 179, 0);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgba(0, 255, 238, 0.786);
+}
+
+.slide p {
+  font-size: larger;
+  line-height: 1.5;
+  /* color: #000; */
+
+}
+
+.slide p:hover{
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  transition: 2s;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.control-button {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: none;
+  background-color: #59fe00;
+  cursor: pointer;
+}
+
+.control-button.active {
+  background-color: #00c3fffe;
+}
+
+@media (max-width: 768px){
+  .slide {
+    height: 480px;
+  }
+
+}
+
+@media (max-width:480px){
+  .slide {
+    height: 580px;
+    font-size: smaller; 
+  }
+  .carousel-container {
+    width: 95%;
+  }
+}

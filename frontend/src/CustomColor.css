@@ -1,0 +1,197 @@
+#customiz-colour {
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url(../public/images/customiz_Ev_Bgi.png);
+    background-size: cover;
+  }
+  
+  #customiz-colour-container {
+    height: 40%;
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    background-color: #414141f3;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 4.5% 10% 3% 0%;
+  }
+  
+  .color-selector {
+    display: flex;
+    flex-direction: column;
+    margin: 1% 7% 1% 2%;
+    padding: 1%;
+    border-radius: 15px;
+  }
+  
+  .color-option {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .color-option:hover {
+    transform: scale(1.1);
+  }
+  
+  .color-option.red {
+    background-color: #ff1818;
+  }
+  .color-option.black {
+    background-color: #000000;
+  }
+  .color-option.blue {
+    background-color: #5555ff;
+  }
+  .color-option.gold {
+    background-color: #fbe461;
+  }
+  .color-option.brown {
+    background-color: rgb(117, 47, 47);
+  }
+  
+  .image {
+    width: 100%;
+    z-index: 2;
+  }
+  .image img {
+    margin: 10px;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    /* border: #f9ed32 solid 1px; */
+  }
+  
+  #customiz-colour-container:hover #bike-image {
+    box-shadow: 0px 0px 10px #242424f3;
+  }
+  #customiz-colour-container:hover .color-selector {
+    box-shadow: 0px 0px 10px #242424f3;
+  }
+  
+  #payment-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+    margin: 0% 0% 9% 0%;
+  }
+  
+  .glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: white solid 0.1px;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    /* z-index: 0; */
+    font-size: larger;
+    border-radius: 10px;
+    margin-left: 4.31%;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+  }
+  
+  .glow-on-hover:hover {
+    border: none;
+  }
+  
+  .glow-on-hover:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .glow-on-hover:active {
+    color: #000;
+  }
+  
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+  
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  
+  .glow-on-hover:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 768px) {
+    .color-option {
+      width: 40px;
+      height: 40px;
+      margin: 0 5px;
+    }
+  
+    .glow-on-hover {
+      width: 180px;
+      height: 45px;
+      font-size: medium;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .color-option {
+      width: 35px;
+      height: 35px;
+      margin: 0 3px;
+    }
+  
+    .glow-on-hover {
+      width: 100%;
+      height: 40px;
+      font-size: small;
+    }
+  }
+  

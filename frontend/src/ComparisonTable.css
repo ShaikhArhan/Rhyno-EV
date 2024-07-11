@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+  }
+  
+  .comparison-table-container {
+    padding: 10px;
+  }
+  
+  .comparison-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    margin-top: 90px; /* Adds space to the top of the table */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+  
+  .header-row,
+  .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .cell {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer; /* Change cursor to pointer to indicate clickability */
+  }
+  
+  .row:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+  
+  .cell.active {
+    background-color: green; /* Background color for active cells */
+  }
+  
+  .feature {
+    font-weight: bold;
+  }
+  
+  .selected-counts {
+    margin-top: 20px;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .contact {
+    margin-top: 20px;
+  }
+  
+  #tableCounters {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 5%;
+  }
+  
+  #tableCounters p {
+    font-size: larger;
+  }
+  
+  #hr {
+    height: auto;
+    margin: 2% 3% 2% 0%;
+    border: 2px solid rgb(116, 0, 104);
+    border-radius: 30px;
+  }
+  
+  #showProduct {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 90px;
+  }
+  
+  #showProduct p {
+    /* margin-top: 4%; */
+  }
+  
+  @media (max-width: 768px) {
+    .comparison-table {
+      margin-top: 30px; /* Adjust spacing for smaller devices */
+      padding: 10px; /* Add padding for better spacing */
+    }
+  
+    .header-row {
+      display: none; /* Hide header row on mobile */
+    }
+  
+    .row {
+      flex-direction: column; /* Stack cells vertically */
+      border: 1px solid #ccc; /* Add border to each row */
+      border-radius: 10px; /* Add border radius to each row */
+      margin-bottom: 10px; /* Add margin between rows */
+      padding: 10px; /* Add padding inside each row */
+    }
+  
+    .cell {
+      padding: 5px 0; /* Adjust padding for smaller cells */
+      text-align: left; /* Align text to the left */
+    }
+    
+    .cell1 {
+      border-radius: 10px 10px 3px 3px;
+    }
+  
+    .cell2 {
+      border-radius: 3px 3px 3px 3px;
+    }
+  
+    .cell3 {
+      border-radius: 3px 3px 10px 10px;
+    }
+  
+    .cell.feature {
+      font-weight: bold; /* Bold the feature names */
+      margin-bottom: 5px; /* Add space below feature names */
+    }
+  
+    .selected-counts {
+      flex-direction: column; /* Stack selected counts vertically */
+      align-items: center; /* Center align selected counts */
+      margin-left: 0; /* Remove left margin */
+      margin-top: 20px; /* Add top margin */
+    }
+  
+    #showProduct {
+      margin-top: 20px; /* Adjust top margin for best product section */
+      justify-content: center; /* Center align best product */
+      width: 100%; /* Full width */
+      text-align: center; /* Center text */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cell {
+      font-size: smaller; /* Adjust font size for very small devices */
+    }
+  
+    .selected-counts {
+      margin-top: 10px;
+      width: 100%;
+    }
+  
+    #showProduct {
+      margin-top: 10px;
+    }
+  }
+  
